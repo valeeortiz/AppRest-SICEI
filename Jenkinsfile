@@ -23,7 +23,7 @@ pipeline {
 
         stage('Ejecutar nueva imagen') {
             steps {
-                sh 'docker run --name ${CONTAINER_NAME} -d -p 3000:3000 ${IMAGE_NAME}-${BUILD_TAG}'
+                sh 'docker run --name ${CONTAINER_NAME} -d -p 3000:3000 ${IMAGE_NAME}-${BUILD_ID}'
             }
         }
     }
